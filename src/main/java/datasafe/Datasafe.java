@@ -75,7 +75,7 @@ public class Datasafe {
     }
 
     protected static StorageDescriptor fs() {
-        String path = "file:///opt/jboss/wildfly/standalone/deployments/ROOT_BUCKET";
+        String path = "file:///home/ROOT_BUCKET";
         return new StorageDescriptor(
                 "FILESYSTEM",
                 () -> new FileSystemStorageService(new Uri(path)),

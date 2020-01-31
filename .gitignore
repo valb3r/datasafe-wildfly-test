@@ -1,1 +1,3 @@
 /.idea/
+/target/
+/datasafe-wildfly-test.iml
