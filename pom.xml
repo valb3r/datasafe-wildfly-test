@@ -7,6 +7,7 @@
     <groupId>de.adorsys.datasafe.wildfly.test</groupId>
     <artifactId>datasafe-wildfly-test</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>war</packaging>
     <build>
         <plugins>
             <plugin>

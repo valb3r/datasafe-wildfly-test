@@ -75,7 +75,7 @@ public class Datasafe {
     }
 
     protected static StorageDescriptor fs() {
-        String path = "file:///home/ROOT_BUCKET";
+        String path = "file:///tmp/bucket";
         return new StorageDescriptor(
                 "FILESYSTEM",
                 () -> new FileSystemStorageService(new Uri(path)),
@@ -119,13 +119,18 @@ public class Datasafe {
     }
 
     public String runTest() {
-        init();
-        jane = registerUser("jane");
+        try {
+            init();
+            jane = registerUser("jane");
 
-        writeDataToPrivate(jane, PRIVATE_FILE_PATH, MESSAGE_ONE);
+            writeDataToPrivate(jane, PRIVATE_FILE_PATH, MESSAGE_ONE);
 
-        AbsoluteLocation<ResolvedResource> privateJane = getFirstFileInPrivate(jane);
-        return readPrivateUsingPrivateKey(jane, privateJane.getResource().asPrivate());
+            AbsoluteLocation<ResolvedResource> privateJane = getFirstFileInPrivate(jane);
+            return readPrivateUsingPrivateKey(jane, privateJane.getResource().asPrivate());
+        } catch (Exception ex) {
+            log.info("Error", ex);
+            throw ex;
+        }
     }
 
 
