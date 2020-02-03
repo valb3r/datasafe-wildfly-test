@@ -1,5 +1,8 @@
-mkdir ROOT_BUCKET
 
-docker build -t wildfly-datasafe . && docker run -it --rm -p 8080:8080 -v ${PWD}/ROOT_BUCKET:/home/ROOT_BUCKET wildfly-datasafe
+Wildfly 11 on oracle java - check src/main/webapp/WEB-INF/jboss-deployment-structure.xml file, it is important 
+to have it.
 
-http://localhost:8080/datasafe-wildfly-test_war/index.jsp
+1. You need to have Docker and Maven on local machine
+1. Run `run-me.sh`
+1. Open http://localhost:8080/datasafe-wildfly-test-1.0-SNAPSHOT/"
+1. You should see `User creation result:: Hello here 1`
