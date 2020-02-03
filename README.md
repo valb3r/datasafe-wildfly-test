@@ -1,6 +1,5 @@
 
-Wildfly 11 on oracle java - check src/main/webapp/WEB-INF/jboss-deployment-structure.xml file, it is important 
-to have it.
+Wildfly 11 on OpenJdk - nothing special in setup.
 
 1. You need to have Docker and Maven on local machine
 1. Run `run-me.sh`
