@@ -128,7 +128,7 @@ public class Datasafe {
             AbsoluteLocation<ResolvedResource> privateJane = getFirstFileInPrivate(jane);
             return readPrivateUsingPrivateKey(jane, privateJane.getResource().asPrivate());
         } catch (Exception ex) {
-            log.info("Error", ex);
+            log.error("Error occurred", ex);
             throw ex;
         }
     }

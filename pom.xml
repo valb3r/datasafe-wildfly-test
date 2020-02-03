@@ -27,7 +27,7 @@
     </build>
 
     <properties>
-        <datasafe.version>1.0.0</datasafe.version>
+        <datasafe.version>1.0.0.1</datasafe.version>
     </properties>
 
     <dependencies>

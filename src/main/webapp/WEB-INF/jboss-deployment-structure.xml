@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<jboss-deployment-structure>
+    <deployment>
+        <resources>
+            <resource-root path="WEB-INF/lib/bcprov-jdk15on-1.64.jar" use-physical-code-source="true"/>
+        </resources>
+    </deployment>
+</jboss-deployment-structure>
